@@ -8,4 +8,6 @@ const app = express();
 app.use("/", statusRoutes);
 app.use("/v1/", peopleRoutes);
 
-app.listen(PORT, () => console.log(`Server listening on port ${PORT}!`));
+app.listen(process.env.PORT || PORT, () =>
+  console.log(`Server listening on port ${process.env.PORT || PORT}!`)
+);
