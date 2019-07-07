@@ -1,0 +1,19 @@
+{
+  "name": "test-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "lint": "eslint src/*.js"
+  },
+  "author": "Joey Gordon",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "nodemon": "^1.19.1"
+  }
+}
