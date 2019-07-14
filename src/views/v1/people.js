@@ -11,10 +11,11 @@ router.get("/people", (req, res) => {
   });
 });
 
+
 router.get("/person/:id", (req, res) => {
   const id = parseInt(req.params.id, 10);
   peopleData.map(person => {
-    if (peopleData.id === id) {
+    if (person.id === id) {
       return res.status(200).send({
         success: "true",
         message: "Person retrieved successfully",
