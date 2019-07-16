@@ -43,11 +43,15 @@ router.get("/person/:id", (req, res) => {
 });
 
 router.get("/people/:number", (req, res) => {
-  const people = peopleData.slice(0, req.params.number);
-  res.status(200).send({
-    success: "true",
-    message: "people retrieved successfully",
-    posts: people
+  models.Person.findAndCountAll({
+    limit: req.params.number,
+  })
+  .then(function(people) {
+    res.status(200).send({
+      success: "true",
+      message: "people retrieved successfully",
+      people: people.rows
+    });
   });
 });
 
