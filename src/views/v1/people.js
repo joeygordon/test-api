@@ -44,11 +44,24 @@ router.get("/person/:id", (req, res) => {
 
 router.get("/people/:number", (req, res) => {
   const people = peopleData.slice(0, req.params.number);
-  return res.status(200).send({
+  res.status(200).send({
     success: "true",
     message: "people retrieved successfully",
     posts: people
   });
+});
+
+router.delete("/person/:id", (req, res) => {
+  models.Person.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(() => {
+    res.status(200).send({
+      success: true,
+      message: "Person successfully deleted"
+    })
+  })
 });
 
 module.exports = router;
