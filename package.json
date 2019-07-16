@@ -10,10 +10,14 @@
   "author": "Joey Gordon",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.10.1"
   },
   "devDependencies": {
     "eslint": "^6.0.1",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "sequelize-cli": "^5.5.0"
   }
 }
