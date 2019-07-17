@@ -15,5 +15,6 @@
       "modules": true
     }
   },
+  "extends": "airbnb",
   "rules": {}
 }
