@@ -1,6 +1,7 @@
 const express = require('express');
 const peopleRoutes = require('./views/v1/people');
 const statusRoutes = require('./views/status');
+const timersRoutes = require('./views/v1/timers');
 
 const PORT = 1234;
 
@@ -12,3 +13,4 @@ app.use(express.json());
 
 app.use('/', statusRoutes);
 app.use('/v1/', peopleRoutes);
+app.use('/v1/', timersRoutes);
