@@ -13,7 +13,7 @@ router.get('/jobs', (req, res) => {
   });
 });
 
-router.post('/jop', (req, res) => {
+router.post('/job', (req, res) => {
   models.Job.create({
     name: req.body.name,
     address: req.body.address,
